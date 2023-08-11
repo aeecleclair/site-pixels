@@ -1,0 +1,60 @@
+enable: true
+title: "Qui sommes-nous ?"
+content: "<p class='lead'>
+  PIXELS est bien plus qu'une simple association. Nous sommes une équipe diversifiée d'étudiants passionnés par l'audiovisuel sous toutes ses formes. Notre mission est de capturer l'essence de chaque événement, de chaque instant de la vie étudiante centralienne, et de le transformer en un récit visuel puissant. Que ce soit un événement sportif enflammé, une conférence inspirante ou simplement des moments de camaraderie, nous sommes là pour capturer ces moments qui font battre le cœur de l'école.
+  </p>"
+button:
+  icon: "icon-smile-fill"
+  btnText: "PIWIGO"
+  URL: "/piwigo/"
+image:
+  x: "img/general/logo.png"
+  _2x: "img/general/logo.png"
+
+# events
+events:
+  enable: true
+  title: "Prochains évènements"
+  items:
+    - title: "WEI Centrale Lyon"
+      month: "Septembre"
+      description: "Le week-end d'intégration, l'évènement incontournable de l'année !"
+
+    - title: "Raid Centrale Lyon"
+      month: "Octobre"
+      description: "Week-end sportif incontournable ouvert à tous"
+
+    - title: "Marché de Noël"
+      month: "Décembre"
+      description: "De nombreux stands sont installés devant le M16, un chaleureux moment"
+
+    - title: "Marché de Noël"
+      month: "Décembre"
+      description: "De nombreux stands sont installés devant le M16, un chaleureux moment"
+
+# experience
+experience:
+  enable: false
+  title: "Experience"
+  description: "Over 15+ years of experience working with companies from all over the world. I design & develop digital products to help businesses and improve people's lives."
+  button:
+    icon: "icon-linkedin-fill"
+    btnText: "Linkedin"
+    URL: "https://www.linkedin.com/company/radity/"
+  button2:
+    icon: "icon-profile-fill"
+    btnText: "Download My Resume"
+    URL: "#"
+
+  items:
+    - title: "Sr. Front-End Developer"
+      company: "Radity"
+      duration: "Feb 2011 - Sep 2019"
+
+    - title: "Sr. Front-End Developer"
+      company: "Textic"
+      duration: "Apr 2010 - Jan 2011"
+
+    - title: "Jr. Front-End Developer"
+      company: "Cyberse"
+      duration: "Jun 2009 - Mar 2010"
