@@ -1,0 +1,20 @@
+# showcase
+showcase:
+  enable: true
+  title: "Découvrez PIWIGO"
+  subtitle: "Notre plateforme multimédia"
+  description: "Sur PIWIGO, retrouvez les plus beaux clichés des évènements centraliens."
+  image:
+    alt: "Showcase keyboard and mouse image"
+    x: "img/piwigo/showcase.png"
+  imageMobile:
+    alt: "Showcase keyboard and mouse image"
+    x: "img/piwigo/showcase.png"
+
+  button:
+    icon: "icon-arrow-right"
+    btnText: "Accéder à PIWIGO "
+    URL: "https://piwigo.myecl.fr"
+
+# image
+img :  /img/piwigo/photo.webp
