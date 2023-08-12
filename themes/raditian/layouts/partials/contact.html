@@ -1,0 +1,22 @@
+{{ if .Site.Data.contact.enable }}
+<section id="contact" class="section section--contact pt-0">
+    <div class="container">
+        <div class="contact">
+            <h2>{{ .Site.Data.contact.title }}</h2>
+            <div class="row pt-2">
+                <div class="col-12 col-lg-7">
+                    <iframe width="100%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=4.753453731536866%2C45.776338569090974%2C4.779202938079835%2C45.79116779551226&amp;layer=mapnik&amp;marker=45.783753675370235%2C4.76632833480835" style="border: 1px solid black"></iframe>
+                </div>
+                <div class="col-12 col-lg-5 contact__info">
+                    <h4>{{ .Site.Data.contact.phone.title }}</h4>
+                    <span>{{ .Site.Data.contact.phone.number }}</span>
+                    <h4>{{ .Site.Data.contact.email.title }}</h4>
+                    <span>{{ .Site.Data.contact.email.email | safeHTML }}</span>
+                    <h4>{{ .Site.Data.contact.address.title }}</h4>
+                    <span>{{ .Site.Data.contact.address.address | safeHTML }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

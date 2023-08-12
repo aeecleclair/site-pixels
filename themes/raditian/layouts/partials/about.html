@@ -1,0 +1,28 @@
+{{ if .Site.Data.about.enable }}
+<section class="section rad-animation-group pb-0" id="about">
+  <div class="container rad-fade-down">
+    <div class="row d-flex flex-column-reverse flex-md-row">
+      <div class="about__profile-picture col-12 col-md-6">
+        <img
+          class="lozad img-responsive image-left-overflow"
+          src="{{ .Site.Data.about.image.x | absURL }}"
+          alt="PIXELS Centrale Lyon"
+        />
+      </div>
+      <div class="col-12 col-md-6 my-auto my-auto">
+        <h2>{{ .Site.Data.about.title }}</h2>
+        <p class="lead">
+          {{ .Site.Data.about.content | safeHTML }}
+        </p>
+        <a
+          href="{{ .Site.Data.about.button.URL }}"
+          class="btn btn-primary"
+        >
+          <i class="{{ .Site.Data.about.button.icon }}"></i>
+          {{ .Site.Data.about.button.btnText }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

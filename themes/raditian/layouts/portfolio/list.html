@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+          initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    <link rel="icon" href="favicon.svg" />
+    {{ partial "gallerydeluxe/head.html" . }}
+    {{ partial "head.html" . }}
+    <style>
+      .rad-fade-in {
+        will-change: opacity, transform;
+        animation-name: rad-fade-in-fallback;
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+      }
+
+    </style>
+  </head>
+
+  {{/* init.hmlt takes either a slice of .images or a .sourcePath that points to a bundle with images.
+    An .id will be calculated if not provided. This will be used to create the URL to the data file.
+  */}}
+  {{ $bundle := site.GetPage "images" }}
+  {{ $images := $bundle.Resources.ByType "image" }}
+  {{ $gallery := partial "gallerydeluxe/init.html" (dict "images" $images) }}
+  {{ $params := site.Params.gallerydeluxe }}
+  {{/* We currently only support 1 gallery per page, which is create4 by an element with id 'gallerydeluxe',
+    and a valid data url.
+  */}}
+  <body>
+    <header class="header rad-animation-group" id="header">
+      <div class="container rad-fade-in">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <a class="navbar-brand" href="{{ .Site.BaseURL | absURL }}">
+            <img
+              class="img-responsive"
+              src="{{ .Site.Params.logo.src }}"
+              alt="Pixels"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent, #header"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ .Site.BaseURL | absURL }}">ACCUEIL</a>
+              </li>
+              {{ range .Site.Menus.header }}
+              <li class="nav-item">
+                <a data-scroll class="nav-link" href="{{ .URL }}"
+                  >{{ .Name | upper }}</a
+                >
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="gallerydeluxe" data-gd-image-data-url="{{ $gallery.imageDataUrl }}">
+      <div id="gd-modal" class="gd-modal">
+        <span id="gd-modal-close" class="gd-modal-close">&times;</span>
+        {{ if $params.enable_exif }}
+          <div id="gd-modal-exif" class="gd-modal-exif"></div>
+        {{ end }}
+      </div>
+    </div>
+  </body>
+</html>
