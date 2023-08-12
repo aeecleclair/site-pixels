@@ -1,4 +1,4 @@
-baseURL = "https://raditian-hugo.radity.com/"
+baseURL = "pixels.myecl.fr"
 languageCode = "fr-fr"
 theme = "raditian"
 
