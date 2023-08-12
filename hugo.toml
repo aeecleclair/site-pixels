@@ -1,4 +1,4 @@
-baseURL = "pixels.myecl.fr"
+baseURL = "https://pixels.myecl.fr"
 languageCode = "fr-fr"
 theme = "raditian"
 
