@@ -7,8 +7,8 @@
           initial-scale=1.0" />
     <title>{{ .Title }}</title>
     <link rel="icon" href="favicon.svg" />
-    {{ partial "gallerydeluxe/head.html" . }}
     {{ partial "head.html" . }}
+    {{ partial "gallerydeluxe/head.html" . }}
     <style>
       .rad-fade-in {
         will-change: opacity, transform;
@@ -52,7 +52,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
+    
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item">
@@ -70,6 +70,7 @@
         </nav>
       </div>
     </header>
+    
 
     <div id="gallerydeluxe" data-gd-image-data-url="{{ $gallery.imageDataUrl }}">
       <div id="gd-modal" class="gd-modal">
@@ -79,5 +80,9 @@
         {{ end }}
       </div>
     </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "base-foot.html" . }}
+
   </body>
 </html>
