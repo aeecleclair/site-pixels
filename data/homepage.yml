@@ -7,7 +7,7 @@ homepage:
 showcase:
   enable: true
   title: "Découvrez PIXELS"
-  subtitle: "Centrale Lyon"
+  subtitle: "École Centrale Lyon"
   description: "Pixels c’est l’association audiovisuelle de l’École qui capture sous tous les angles la vie étudiante. <br> Des soirées endiablées aux week-end sportifs, Pixels fige les instants les plus hilarants, sérieux et émouvants en photos et vidéos."
   image:
     alt: "Appareil photo vintage"
